@@ -10,19 +10,13 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Quick connect state.
+ * Client log document response dto.
  */
 @Serializable
-public enum class QuickConnectState(
-	public val serialName: String
-) {
-	@SerialName("Unavailable")
-	UNAVAILABLE("Unavailable"),
-	@SerialName("Available")
-	AVAILABLE("Available"),
-	@SerialName("Active")
-	ACTIVE("Active"),
-	;
-
-	public override fun toString(): String = serialName
-}
+public data class ClientLogDocumentResponseDto(
+	/**
+	 * Gets the resulting filename.
+	 */
+	@SerialName("FileName")
+	public val fileName: String
+)

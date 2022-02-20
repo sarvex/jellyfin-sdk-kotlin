@@ -59,6 +59,8 @@ public enum class TranscodeReason(
 	SUBTITLE_CODEC_NOT_SUPPORTED("SubtitleCodecNotSupported"),
 	@SerialName("DirectPlayError")
 	DIRECT_PLAY_ERROR("DirectPlayError"),
+	@SerialName("AudioIsExternal")
+	AUDIO_IS_EXTERNAL("AudioIsExternal"),
 	;
 
 	public override fun toString(): String = serialName

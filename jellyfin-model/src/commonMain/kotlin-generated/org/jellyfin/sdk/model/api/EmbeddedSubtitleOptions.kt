@@ -9,22 +9,21 @@ import kotlin.String
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * An enum representing the options to disable embedded subs.
+ */
 @Serializable
-public enum class Architecture(
+public enum class EmbeddedSubtitleOptions(
 	public val serialName: String
 ) {
-	@SerialName("X86")
-	X86("X86"),
-	@SerialName("X64")
-	X64("X64"),
-	@SerialName("Arm")
-	ARM("Arm"),
-	@SerialName("Arm64")
-	ARM_64("Arm64"),
-	@SerialName("Wasm")
-	WASM("Wasm"),
-	@SerialName("S390x")
-	S39_0X("S390x"),
+	@SerialName("AllowAll")
+	ALLOW_ALL("AllowAll"),
+	@SerialName("AllowText")
+	ALLOW_TEXT("AllowText"),
+	@SerialName("AllowImage")
+	ALLOW_IMAGE("AllowImage"),
+	@SerialName("AllowNone")
+	ALLOW_NONE("AllowNone"),
 	;
 
 	public override fun toString(): String = serialName

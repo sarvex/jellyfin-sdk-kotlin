@@ -9,22 +9,29 @@ import kotlin.String
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Enum HardwareEncodingType.
+ */
 @Serializable
-public enum class Architecture(
+public enum class HardwareEncodingType(
 	public val serialName: String
 ) {
-	@SerialName("X86")
-	X86("X86"),
-	@SerialName("X64")
-	X64("X64"),
-	@SerialName("Arm")
-	ARM("Arm"),
-	@SerialName("Arm64")
-	ARM_64("Arm64"),
-	@SerialName("Wasm")
-	WASM("Wasm"),
-	@SerialName("S390x")
-	S39_0X("S390x"),
+	@SerialName("AMF")
+	AMF("AMF"),
+	@SerialName("QSV")
+	QSV("QSV"),
+	@SerialName("NVENC")
+	NVENC("NVENC"),
+	@SerialName("OMX")
+	OMX("OMX"),
+	@SerialName("V4L2M2M")
+	V4L2M2M("V4L2M2M"),
+	@SerialName("MediaCodec")
+	MEDIA_CODEC("MediaCodec"),
+	@SerialName("VAAPI")
+	VAAPI("VAAPI"),
+	@SerialName("VideoToolBox")
+	VIDEO_TOOL_BOX("VideoToolBox"),
 	;
 
 	public override fun toString(): String = serialName
